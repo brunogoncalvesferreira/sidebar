@@ -1,0 +1,118 @@
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+#app {
+  display: flex;
+  gap: 20px;
+}
+
+aside {
+  width: 250px;
+  background-color: var(--green);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+
+  transition: width 0.5s;
+}
+
+aside .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px;
+}
+
+aside .header button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+aside .options {
+  padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+aside .options .options-content,
+aside .options .input-content {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+}
+
+aside .options .input-content {
+  background-color: var(--light-green);
+  border-radius: 10px;
+}
+
+aside .options .input-content input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+aside .options .options-content:hover {
+  background-color: var(--light-green);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+aside .footer {
+  width: 100%;
+  display: flex;
+  padding: 8px 14px;
+  gap: 8px;
+
+  background-color: var(--light-green);
+}
+
+aside .footer .info-user {
+  font-size: 14px;
+}
+
+aside .footer .info-user span + span {
+  font-size: 12px;
+}
+
+main {
+  padding: 14px;
+}
+
+/* sidebar closed */
+
+aside.closed {
+  width: 80px;
+
+  transition: width 0.5s;
+}
+
+aside.closed .header .logo,
+aside.closed span,
+aside.closed .footer .logout {
+  display: none;
+}
